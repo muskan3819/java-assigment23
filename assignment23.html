@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <title>dice</title>
+       <style>
+        body{
+            background-color: rgb(245, 233, 245);
+        }
+.con{
+    border: 3px solid black;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgb(241, 6, 194);
+    margin-top: 50px;
+}
+h1{
+    text-align: center;
+}
+.dice{
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+}
+.btn-roll{
+    display: block;
+    margin: 20px auto;
+    font-size: 20px;
+    padding: 5px 30px;
+    border: none;
+    background-color: rgb(228, 57, 188);
+   transition-duration: 0.4s;
+   color: #f9f3f3;
+
+}
+.btn-roll:hover{
+    border-radius: 20px;
+    background-color: rgb(216, 111, 192);
+    color: #181818;
+    cursor: pointer;
+
+}
+       </style>
+
+</head>
+<body>
+    <div class="con">
+        <h1>DICE</h1>
+        <img src="./dice.png" class="dice" id="dice-img">
+        <button class="btn-roll" onclick="rolldice()">ROLL DICE</button>
+    </div>
+    <script>
+        function rolldice(){
+            const min=1;
+            const max=6;
+            const random =Math.floor(Math.random()*(max-min+1))+min;
+            const diceImg=document.getElementById('dice-img');
+
+            if (random==1){
+                diceImg.src="one.png";
+
+            }
+            if (random==2){
+                diceImg.src="two.png"; 
+            }
+            if (random==3){
+                diceImg.src="three.png";
+                
+            }
+            if (random==4){
+                diceImg.src="four.png";
+                
+            }
+            if (random==5){
+                diceImg.src="five.png";
+                
+            }
+            if (random==6){
+                diceImg.src="six.png";
+                
+            }
+
+
+        }
+    </script>
+</body>
+</html>
